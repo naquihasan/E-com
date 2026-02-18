@@ -1,0 +1,41 @@
+.banner{
+    padding: 20px 130px;
+    position: relative;
+}
+
+.banner-caption {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translateY(-50%);
+}
+
+.banner-caption h1{
+    font-size: 44px;
+    font-weight: 700;
+    color: #364153;
+    line-height: 1.4;
+}
+
+.btn-success{
+    background-color: #4fbf8b;
+    color: white;
+    padding: 14px 40px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.buttons p{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #364153;
+    font-weight: 500;
+}
