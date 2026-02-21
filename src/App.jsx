@@ -19,6 +19,7 @@ import AddCategory from "./Admin/Pages/AddCategory";
 import CategoryList from "./Admin/Pages/CategoryList";
 import EditCategory from "./Admin/Pages/EditCategory";
 import ProductLists from "./Admin/Pages/ProductLists";
+import AllProducts from "./Pages/AllProducts/AllProducts";
 
 const App = () => {
   return (
@@ -30,8 +31,10 @@ const App = () => {
         <Route index element={<Home />} />
         <Route path="products/:category" element={<ProductList />} />
         <Route path="product-details/:id" element={<DetailsPage />} />
-
+        <Route path="products" element={<AllProducts/>} />
       </Route>
+
+      
 
 
       {/* ADMIN ROUTES */}
