@@ -1,0 +1,149 @@
+.details-container {
+    display: flex;
+    gap: 40px;
+    padding: 36px 120px;
+}
+
+/* LEFT */
+.left {
+    /* flex: 1; */
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    width: 45%;
+    gap: 16px;
+}
+
+.main-image img {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #d4d8d4;
+}
+.image-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.image-grid img {
+    width: 100px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid #d4d7d6;
+}
+
+
+
+.image-grid img:hover {
+    border: 2px solid #00bc7d;
+}
+
+/* RIGHT */
+.right {
+    flex: 1;
+}
+
+.right h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.price-box {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.offer-price {
+    font-size: 24px;
+    font-weight: 500;
+    color: #2b3441;
+    margin-right: 15px;
+}
+
+.tax{
+   color: gray; 
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.description {
+    margin-bottom: 25px;
+}
+
+.description li {
+    margin-bottom: 8px;
+}
+
+
+.details-container .buttons-group{
+    display: flex;
+    width: 100%;
+    margin-top: 24px;
+    gap: 20px;
+
+}
+
+.details-container .buttons-group div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.details-container .add-btn {
+    height: 54px;
+    background: #00bc7d;
+    border: none;
+    color: #ffffff;
+    padding: 6px 15px;
+    border-radius: 0px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.details-container .add-cart-btn {
+    width: 200px;
+    padding: 12px 0px;
+    background-color: #dffff4;
+    color: #00bc7d;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid;
+    height: 54px;
+    cursor: pointer;
+}
+
+.details-container .add-cart-btn > *{
+    width: 33%;
+    text-align: center;
+}
+
+.add-cart-btn > button{
+    cursor: pointer;
+}
+
+
+.add-cart-btn span{
+    cursor: auto;
+}
+
+.add-cart-btn:hover {
+    opacity: 0.9;
+}
+
+
+.btn-buy{
+    background-color: #f3f4f6;
+    width: 100%;
+    height: 100%;
+}

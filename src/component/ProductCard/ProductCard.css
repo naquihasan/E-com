@@ -1,7 +1,13 @@
-.product-container{
-    display: flex;
+.product-container {
+    display: grid;
     width: 100%;
-    justify-content: space-between;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.item-wrapper{
+    width: 220px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 

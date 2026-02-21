@@ -12,14 +12,15 @@
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  
 }
 
 .card {
+  display: block;
   background: white;
   border-radius: 12px;
-  padding: 20px;
+  padding: 20px 20px 0px;
   width: 220px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   transition: 0.3s;
   cursor: pointer;
 }
@@ -57,11 +58,14 @@
 }
 
 .bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding: 0px 20px 16px;
+    border-radius: 12px;
 }
+
 
 .price {
   color: #22c55e;

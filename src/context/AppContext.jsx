@@ -1,6 +1,6 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { dummyProducts } from '../assets/assets'
+import axios from "axios";
 
 
 export const AppContext = createContext();
@@ -10,13 +10,21 @@ export const AppContextProvider = ({ children }) => {
     const navigate = useNavigate();
     const [user, setUser] = useState(null);
     const [seller, setIsSeller] = useState(false);
-    const [products, setProducts] = useState(dummyProducts);
+    const [products, setProducts] = useState([]);
     const [cartItems, setCartItems] = useState([]);
+
+
+    // 🔥 FETCH PRODUCTS FROM BACKEND
+    useEffect(() => {
+        axios.get("http://localhost:5000/api/products")
+            .then(res => setProducts(res.data))
+            .catch(err => console.log(err));
+    }, []);
 
 
     const addToCart = (product) => {
 
-        setCartItems((prevCart) => {
+        setCartItems((prevCart) => {    
 
             const existingItem = prevCart.find(item => item._id === product._id);
 
