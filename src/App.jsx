@@ -20,6 +20,8 @@ import CategoryList from "./Admin/Pages/CategoryList";
 import EditCategory from "./Admin/Pages/EditCategory";
 import ProductLists from "./Admin/Pages/ProductLists";
 import AllProducts from "./Pages/AllProducts/AllProducts";
+import ComparePage from "./Pages/Compare/ComparePage";
+import Cart from "./Pages/Cart/Cart";
 
 const App = () => {
   return (
@@ -32,7 +34,11 @@ const App = () => {
         <Route path="products/:category" element={<ProductList />} />
         <Route path="product-details/:id" element={<DetailsPage />} />
         <Route path="products" element={<AllProducts/>} />
+        <Route path="compare" element={<ComparePage/>} />
+        <Route path="cart" element={<Cart/>} />
       </Route>
+
+      
 
       
 
