@@ -1,11 +1,12 @@
 import React from 'react'
 import { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { assets } from '../assets/assets'
 import { useAppContext } from "../context/AppContext";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false)
+    const navigate = useNavigate();
 
     const { cartItems } = useAppContext();
     const totalQuantity = cartItems.reduce((total, item) => total + item.quantity, 0);
@@ -31,7 +32,7 @@ const Navbar = () => {
                     </svg>
                 </div>
 
-                <div className="relative cursor-pointer">
+                <div className="relative cursor-pointer" onClick={()=>navigate("/cart")}>
                     <img src={assets.cart_icon} alt="cart" className='w-[20px] h-[20px]' />
                     <button className="absolute -top-2 -right-3 text-xs text-white bg-emerald-500 w-[18px] h-[18px] rounded-full">
                         {totalQuantity}

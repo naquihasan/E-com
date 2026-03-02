@@ -12,6 +12,30 @@ export const AppContextProvider = ({ children }) => {
     const [seller, setIsSeller] = useState(false);
     const [products, setProducts] = useState([]);
     const [cartItems, setCartItems] = useState([]);
+    const [compareItems, setCompareItems] = useState([]);
+
+    const addToCompare = (product) => {
+
+  if (compareItems.find(item => item._id === product._id)) return;
+
+  if (compareItems.length >= 2) {
+    alert("You can compare only 2 products");
+    return;
+  }
+
+  const updated = [...compareItems, product];
+  setCompareItems(updated);
+
+  if (updated.length === 2) {
+    navigate("/compare");
+  }
+};
+
+
+    const removeFromCompare = (id) => {
+    setCompareItems(compareItems.filter(item => item._id !== id));
+    navigate("/");
+    };
 
 
     // 🔥 FETCH PRODUCTS FROM BACKEND
@@ -73,9 +97,19 @@ export const AppContextProvider = ({ children }) => {
 
 
 
+    // 🔢 Total Quantity (all items)
+    const totalQuantity = cartItems.reduce((total, item) => {
+    return total + item.quantity;
+    }, 0);
+
+    // 💰 Grand Total Price
+    const totalPrice = cartItems.reduce((total, item) => {
+    return total + item.price * item.quantity;
+    }, 0);
 
 
-    const value = { navigate, user, setUser, seller, setIsSeller, products, setProducts, addToCart, cartItems, setCartItems, removeFromCart, increaseQty, decreaseQty }
+
+    const value = { navigate, user, setUser, seller, setIsSeller, products, setProducts, addToCart, cartItems, setCartItems, removeFromCart, increaseQty, decreaseQty, compareItems, addToCompare, removeFromCompare , totalQuantity , totalPrice }
     return (
         <AppContext.Provider value={value}>
             {children}

@@ -1,0 +1,143 @@
+.cart-page {
+    width: 100%;
+    /* max-width: 1100px; */
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 30px 120px;
+    border-radius: 12px;
+    /* box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); */
+    display: flex;
+    gap: 36px;
+}
+
+/* TABLE */
+.cart-page table {
+  width: 70%;
+  border-collapse: collapse;
+}
+
+.cart-page thead {
+  background: #f8f9fa;
+}
+
+.cart-page th {
+  text-align: left;
+  padding: 15px 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 2px solid #eee;
+}
+
+.cart-page td {
+  padding: 18px 10px;
+  vertical-align: middle;
+  border-bottom: 1px solid #eee;
+}
+
+/* PRODUCT IMAGE */
+.product-img {
+  width: 170px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.product-img:hover {
+  transform: scale(1.05);
+}
+
+/* QUANTITY BUTTONS */
+.cart-page button {
+  padding: 6px 12px;
+  margin: 0 6px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+
+.incButton{
+    background: #f1f1f1;
+}
+
+.cart-page button:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* REMOVE BUTTON SPECIAL */
+.cart-page td button:last-child {
+  background: #ff4d4d;
+  color: white;
+}
+
+.cart-page td button:last-child:hover {
+  background: #cc0000;
+}
+
+/* TOTAL SECTION */
+.cart-page h3 {
+  margin-top: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+
+
+
+.checkout-btn{
+    background: #00bc7d !important;
+    height: 44px;
+    border: none;
+    color: #ffffff;
+    padding: 6px 15px;
+    border-radius: 0px !important;
+    cursor: pointer;
+    width: 85%;
+    font-size: 18px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .cart-page table,
+  .cart-page thead,
+  .cart-page tbody,
+  .cart-page th,
+  .cart-page td,
+  .cart-page tr {
+    display: block;
+  }
+
+  .cart-page thead {
+    display: none;
+  }
+
+  .cart-page tr {
+    background: #fff;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .cart-page td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border: none;
+  }
+
+  .cart-page td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #555;
+  }
+}

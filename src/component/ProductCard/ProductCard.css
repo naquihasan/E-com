@@ -41,3 +41,17 @@
     width: 20px;
     text-align: center;
 }
+
+.comapre-btn{
+    position: relative;
+}
+
+.comapre-btn::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #fff7f7;
+}

@@ -6,7 +6,7 @@ import './DetailsPage.css'
 const DetailsPage = () => {
 
     const { id } = useParams()
-    const { products, cartItems, addToCart, increaseQty, decreaseQty } = useAppContext()
+    const { products, cartItems, addToCart, increaseQty, decreaseQty } = useAppContext();
 
     if (!products.length) return <h2>Loading...</h2>;
 

@@ -9,10 +9,8 @@
 }
 
 .card-wrapper {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .card {
@@ -30,9 +28,12 @@
 }
 
 .product-img {
-  width: 100%;
-  height: 150px;
-  object-fit: contain;
+    width: 110px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: 0.3s;
+    margin: auto;
 }
 
 .category {
@@ -77,6 +78,7 @@
 .old-price {
   text-decoration: line-through;
   color: gray;
+  font-size: 14px;
 }
 
 .add-btn {

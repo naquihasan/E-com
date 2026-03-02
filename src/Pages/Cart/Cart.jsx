@@ -42,7 +42,7 @@ const Cart = () => {
                 <td>
                   <button className='incButton' onClick={() => decreaseQty(item._id)}>-</button>
                   {item.quantity}
-                  <button className='decButton' onClick={() => increaseQty(item._id)}>+</button>
+                  <button className='decyyButton' onClick={() => increaseQty(item._id)}>+</button>
                 </td>
 
                 <td>
@@ -60,7 +60,7 @@ const Cart = () => {
         </tbody>
       </table>
 
-      <div style={{ padding: "20px" , width:'30%'  , background:"#f8f9fa"}}>
+      <div style={{ padding: "20px" , width:'30%' , height:"200px"  , background:"#f8f9fa" , position:'relative'}}>
         <h3>Total Items: {totalQuantity}</h3>
         <h3>Total Price: ₹ {totalPrice}</h3>
         <button className='checkout-btn'>Checkout</button>

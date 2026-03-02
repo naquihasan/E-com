@@ -6,7 +6,7 @@ import './ProductCard.css'
 
 const ProductCard = ({ item }) => {
 
-    const { cartItems, addToCart, increaseQty, decreaseQty } = useAppContext();
+    const { cartItems, addToCart, increaseQty, decreaseQty, addToCompare, compareItems } = useAppContext();
 
     const cartItem = cartItems.find(cart => cart._id === item._id);
 
@@ -45,6 +45,22 @@ const ProductCard = ({ item }) => {
                         <button onClick={() => increaseQty(item._id)}>+</button>
                     </div>
                 )}
+            </div>
+            <div className='comapre-btn' style={{ padding: "8px 16px" , position:"relative" }}>
+                <label style={{ cursor: "pointer" , color:" #909393" , display: "flex", gap: "4px" }}>
+                    <input
+                    type="checkbox"
+                    checked={compareItems.some(p => p._id === item._id)}
+                    onChange={(e) => {
+                        if (e.target.checked) {
+                        addToCompare(item);
+                        } else {
+                        removeFromCompare(item._id);
+                        }
+                    }}
+                    />
+                    <span>Add to Compare</span>
+                </label>
             </div>
         </div>
     )
